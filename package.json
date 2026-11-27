@@ -1,0 +1,12 @@
+{
+  "name": "golden-farm-leaderboard",
+  "version": "1.0.0",
+  "description": "Minimal leaderboard server for the Golden Farm game",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
