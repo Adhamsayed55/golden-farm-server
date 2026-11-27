@@ -108,6 +108,10 @@ const server = http.createServer((req, res) => {
     return sendJson(res, 200, topScores(50));
   }
 
+  if (req.method === 'GET' && url.pathname === '/top') {
+    return sendJson(res, 200, topScores(10).map(s => ({ name: s.name, score: s.score })));
+  }
+
   if (req.method === 'POST' && url.pathname === '/submit') {
     let body = '';
     req.on('data', chunk => {
